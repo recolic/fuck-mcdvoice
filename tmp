@@ -1,0 +1,213 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 68.177.188.31...
+* TCP_NODELAY set
+* Connected to www.mcdvoice.com (68.177.188.31) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+  CApath: none
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [85 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [5157 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [262 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / AES256-SHA256
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: OU=Domain Control Validated; CN=www.mcdvoice.com
+*  start date: May 31 14:17:27 2018 GMT
+*  expire date: May 31 14:17:27 2020 GMT
+*  subjectAltName: host "www.mcdvoice.com" matched cert's "www.mcdvoice.com"
+*  issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certs.godaddy.com/repository/; CN=Go Daddy Secure Certificate Authority - G2
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET / HTTP/1.1
+> Host: www.mcdvoice.com
+> User-Agent: curl/7.63.0
+> Accept: */*
+> 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0{ [5 bytes data]
+< HTTP/1.1 302 Found
+< Cache-Control: private
+< Transfer-Encoding: chunked
+< Content-Type: text/html; charset=utf-8
+< Location: /?AspxAutoDetectCookieSupport=1
+< Server: Microsoft-IIS/8.5
+< X-AspNet-Version: 4.0.30319
+< Set-Cookie: AspxAutoDetectCookieSupport=1; path=/
+< X-Powered-By: ASP.NET
+< Date: Thu, 31 Jan 2019 05:05:10 GMT
+< Set-Cookie: BIGipServermcdvoice.com_pool=1530008236.24351.0000; path=/
+< 
+* Ignoring the response-body
+{ [154 bytes data]
+100   148    0   148    0     0    422      0 --:--:-- --:--:-- --:--:--   421
+* Connection #0 to host www.mcdvoice.com left intact
+* Issue another request to this URL: 'https://www.mcdvoice.com/?AspxAutoDetectCookieSupport=1'
+* Found bundle for host www.mcdvoice.com: 0x5593579b60d0 [can pipeline]
+* Could pipeline, but not asked to!
+* Re-using existing connection! (#0) with host www.mcdvoice.com
+* Connected to www.mcdvoice.com (68.177.188.31) port 443 (#0)
+} [5 bytes data]
+> GET /?AspxAutoDetectCookieSupport=1 HTTP/1.1
+> Host: www.mcdvoice.com
+> User-Agent: curl/7.63.0
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 302 Found
+< Content-Type: text/html; charset=utf-8
+< Location: /(X(1)S(hu4oi34poewqqngut0psb05r))/Index.aspx?AspxAutoDetectCookieSupport=1
+< Server: Microsoft-IIS/8.5
+< X-Powered-By: ASP.NET
+< Date: Thu, 31 Jan 2019 05:05:10 GMT
+< Content-Length: 192
+< 
+* Ignoring the response-body
+{ [192 bytes data]
+100   192  100   192    0     0    470      0 --:--:-- --:--:-- --:--:--   470
+* Connection #0 to host www.mcdvoice.com left intact
+* Issue another request to this URL: 'https://www.mcdvoice.com/(X(1)S(hu4oi34poewqqngut0psb05r))/Index.aspx?AspxAutoDetectCookieSupport=1'
+* Found bundle for host www.mcdvoice.com: 0x5593579b60d0 [can pipeline]
+* Could pipeline, but not asked to!
+* Re-using existing connection! (#0) with host www.mcdvoice.com
+* Connected to www.mcdvoice.com (68.177.188.31) port 443 (#0)
+} [5 bytes data]
+> GET /(X(1)S(hu4oi34poewqqngut0psb05r))/Index.aspx?AspxAutoDetectCookieSupport=1 HTTP/1.1
+> Host: www.mcdvoice.com
+> User-Agent: curl/7.63.0
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Cache-Control: private
+< Content-Type: text/html; charset=utf-8
+< Server: Microsoft-IIS/8.5
+< X-AspNet-Version: 4.0.30319
+< Set-Cookie: LID=US; expires=Fri, 01-Mar-2019 05:05:11 GMT; path=/
+< Set-Cookie: CCID=index.aspx; expires=Fri, 01-Feb-2019 05:05:11 GMT; path=/
+< Set-Cookie: SN=CH-WEB-WSE04-P; expires=Thu, 31-Jan-2019 11:05:11 GMT; path=/
+< Set-Cookie: T=SN=CH-WEB-WSE04-P&ST=1/31/2019 5:05:11 AM&FP=/Index.aspx&RA=136.25.169.71&LA=1/31/2019 5:05:11 AM; expires=Thu, 31-Jan-2019 11:05:11 GMT; path=/
+< X-Powered-By: ASP.NET
+< Date: Thu, 31 Jan 2019 05:05:10 GMT
+< Content-Length: 10460
+< 
+{ [845 bytes data]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>McDonald’s Customer Satisfaction Survey on McDVoice.com - Welcome</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="description" content="&lt;span style=&quot;font-weight:normal;&quot;&gt;Welcome to the McDonald’s Customer Satisfaction Survey on McDVOICE.com. We value your candid feedback and appreciate you taking the time to complete our survey.&lt;/span&gt;" />
+    <meta name="keywords" content="mcdvoice,mcd,mcd voice,mcdonalds,customer,satisfaction,survey,guest,voice" />
+    <meta name="robots" content="index,nofollow" />
+    <script type="text/javascript">var AcceptedURLsArray = 'mcdonalds-stage-sites-us.adobecqms.net,https://id.services.smg.com';</script>
+    <link rel="icon" type="image/x-icon" href="/(X(1)S(hu4oi34poewqqngut0psb05r))/Projects/MCD_CSI/images/favicon.jpg" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/(X(1)S(hu4oi34poewqqngut0psb05r))/Projects/MCD_CSI/images/favicon.jpg" />
+    <script type="text/javascript" src="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/jscript/Library.js"> </script>
+    <script type="text/javascript" src="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/jscript/DisallowIFrames.js"> </script>
+    <link rel="stylesheet" type="text/css" href="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/controls/BrandedInputs/BrandedInput.css" />
+    <script type="text/javascript" src="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/controls/BrandedInputs/BrandedInputCommon.js"> </script>
+    <script type="text/javascript" src="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/controls/BrandedInputs/BrandedInput.js"> </script>
+    <script type="text/javascript" src="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/controls/BrandedInputs/BrandedInputInit.js"> </script>
+    <link rel="stylesheet" type="text/css" href="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/css/GlobalDesktop.css" /><!--[if lte IE 7.0]><link rel="stylesheet" type="text/css" href="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/css/ie7.css" />
+									<![endif]-->
+									<!--[if lte IE 6.0]><link rel="stylesheet" type="text/css" href="/(X(1)S(hu4oi34poewqqngut0psb05r))/Common/css/ie6.css" />
+									<![endif]-->
+									<script type="text/javascript" src="Common/jscript/AutoTab.js"> </script>
+					<script type="text/javascript">
+						// BH_1.1 
+						var _bhtg_ok_to_log = false;    
+						var bhawkplt_start = new Date().getTime();
+						if(window.attachEvent){ window.attachEvent('onload',function(){_bhtg_ok_to_log=true;}); } else { window.addEventListener('load',function(){_bhtg_ok_to_log=true;},false);}
+						function bhtgIncludeLib(jsFileName, acctID) {if (typeof jsFileName == 'undefined') throw "BHTG usage error: must pass a JS file name when calling bhtgIncludeLib"; if (typeof acctID == 'undefined') throw "BHTG usage error: must pass your account ID when calling bhtgIncludeLib"; document.write(unescape("%3cscript src='" + (document.location.protocol == 'https:' ? 'https:' : 'http:') + "//lib.browserhawk.com/bhtg/" + jsFileName + "?acct=" + acctID + "'%3e %3c/script%3e"));}
+						var _bhtg_sessionid = "20190130230511CHWEBWSE04Phu4oi34poewqqngut0psb05r";
+						var _bhtg_userid = "hu4oi34poewqqngut0psb05r";
+						var _bhtg_siteid = "MCD_CSI";
+						var _bhtg_logurl = "CDID.aspx";
+							
+						function bhawkcoreonload() { if (_bhtg_ok_to_log == true) {bhawk.setSingleSessionLogging(false); bhawk.log();} else setTimeout('bhawkcoreonload();', 250);}
+						bhtgIncludeLib('bhawk.js', 'servicemgmt');
+					</script>
+					<script type="text/javascript">
+						try {
+						bhawk.setSupportFilesRoot("Common/bhtgfiles");
+						if (typeof _bhtg_siteid != 'undefined') { bhawkplt.setExtraString1(_bhtg_siteid);}
+						} catch(e) {}
+					</script>
+					<script type="text/javascript">
+						try{
+							if (typeof _bhtg_siteid != 'undefined') {bhawk.setExtraString1(_bhtg_siteid); }
+							var bhProperties = "activexcontrols,aol,aolversion,beta,browser,compressgzip,dhtml,fileupload,fullversion,hdml,ipaddr,javaapplets,javascriptver,language,majorver,minorver,minorverlet,osdetails,pda,platform,png,proxy,ssl,sslactive,vbscript,version,xml,iframes,netclrinstalled,netclrversion,proxystring,wininstallerminver,xmlhttprequest,country,countryname,javascriptenabled,flash,flashverex,javaenabled,activexenabled,vbscriptenabled,director,authorware,mapguide,directorverex,colordepth,height,width,ipixviewer,msxml,javascriptbuild,timezonediff,fontsmoothing,langsystem,languser,servicepack,displayxdpiactual,displayydpiactual,flip4mac,sessioncookies,persistentcookies,mediaplayer,acrobat,acrobatverex,mediaplayerverex,netmeetingbuild,connectiontype,browserbuild,textsize,";
+							bhawk.setPropertiesToLog(bhProperties);				
+						}catch(e) {}
+					</script>
+			
+					<link rel="stylesheet" type="text/css" href="Common/jscript/waitscreen/waitscreen.css" />
+					<script type="text/javascript">
+						var waitscreentime = 5000;
+						var waitscreentext = 'One moment please...';
+						var _SubmittedTime = 0;
+					</script>
+					<script type="text/javascript" src="Common/jscript/waitscreen/waitscreen.js"></script>
+			<link rel="stylesheet" type="text/css" href="/(X(1)S(hu4oi34poewqqngut0psb05r))/Projects/MCD_CSI/css/Styles.css" /><!--[if lte IE 7.0]><link rel="stylesheet" type="text/css" href="/(X(1)S(hu4oi34poewqqngut0psb05r))/Projects/MCD_CSI/css/IE7.css" />
+									<![endif]-->
+									<script type="text/javascript">
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-2337075-40', 'mcdvoice.com');
+          ga('send', 'pageview');
+      </script>
+  </head>
+  <body class="IndexPage CouponEntry US SmartCode  Y lightSurvey PreValidation DesktopMode">
+    <div id="outerframe" class="BrandedRblEnabled-JS BrandedOptEnabled-JS">
+      <div id="headerpush"> </div>
+      <div id="header"><h1><img src="Projects/MCD_CSI/images/Header.png" height="100" width="792" alt="McDonald’s Customer Satisfaction Survey" title="" /></h1></div>
+      <div id="middle">
+        <div id="middleextratop"> </div>
+        <div id="content">
+          <form method="post" id="surveyEntryForm" action="Survey.aspx?c=110523" autocomplete="off">
+            <div id="surveyQuestions" class="SurveyHolder"><!-- Modules --><input type="hidden" id="JavaScriptEnabled" name="JavaScriptEnabled" value="0"/><script type="text/javascript">if (document.getElementById("JavaScriptEnabled")) { document.getElementById("JavaScriptEnabled").value = "1"; } </script><input type="hidden" id="FIP" name="FIP" value="True"/><ul class="languageOption"><li><a href="Index.aspx?LanguageID=es-US">Español</a></li></ul><hr /><div class="IndexBox"><div class="IndexBox00"><p class="IndexHeader"><h3>Welcome to the <span class="noWrap">McDonald’s</span>  Customer Satisfaction Survey on McDVoice.com.</h3></p>
+<p class="IndexText"><a href="Index.aspx?ADACompliance=true">Load Accessibility Friendly Version</a></p>
+<p class="IndexText">We value your candid feedback and appreciate you taking the time to complete our survey.</p>
+<p class="ItemOne IndexText"><span class="ItemOne IndexText00"><label for="CN1">To begin, please enter the 26-digit Survey Code located in the middle of your receipt.</label></span>
+<span class="ItemOne IndexText01"><input type="text" autocomplete="off" id="CN1" name="CN1" title="CN1" maxlength="5" style="width:3.65em;" value="" onkeyup="return autoTab(this, 5, event);"/> - <input type="text" autocomplete="off" id="CN2" name="CN2" title="CN2" maxlength="5" style="width:3.65em;" value="" onkeyup="return autoTab(this, 5, event);"/> - <input type="text" autocomplete="off" id="CN3" name="CN3" title="CN3100 10460  100 10460    0     0  19298      0 --:--:-- --:--:-- --:--:-- 19298
+* Connection #0 to host www.mcdvoice.com left intact
+" maxlength="5" style="width:3.65em;" value="" onkeyup="return autoTab(this, 5, event);"/> - <input type="text" autocomplete="off" id="CN4" name="CN4" title="CN4" maxlength="5" style="width:3.65em;" value="" onkeyup="return autoTab(this, 5, event);"/> - <input type="text" autocomplete="off" id="CN5" name="CN5" title="CN5" maxlength="5" style="width:3.65em;" value="" onkeyup="return autoTab(this, 5, event);"/> - <input type="text" autocomplete="off" id="CN6" name="CN6" title="CN6" maxlength="1" style="width:0.97em;" value=""/></span>
+</p>
+<div id="Buttonholder"><input type="submit" id="NextButton" name="NextButton" value="Start"  onclick="return waitifneeded();"/></div></div>
+<div class="IndexBox01"><img src="Projects/MCD_CSI/images/Receipt_POSType2.png" width="294" height="407" alt="26 Digit Receipt" /><br /><a href="Index.aspx?POSType=PieceMeal">If you do not have a 26-digit code printed on your receipt, click here.</a></div>
+</div>
+</div>
+          </form>
+          <div id="contenttrailer" class="pusher"> </div>
+        </div>
+        <div id="middleextrabottom"> </div>
+      </div>
+      <div id="footer">
+        <ul id="footerL">
+ 					<li id="footerPP"><a href="Projects/_globalconfigs/text/pdf/smgprivacypolicy/SMG_PP_US.pdf"  onclick="window.open(this.href); return false;">SMG Privacy Policy</a></li>
+					<li id="footerTC"><a href="Projects/_globalconfigs/text/pdf/termsofservice/SMG_TOS_US.pdf"  onclick="window.open(this.href); return false;">SMG Terms of Service</a></li><br/>
+          <li id="footerPP"><a href="http://www.mcdonalds.com/us/en/privacy.html" onclick="window.open(this.href); return false;">Privacy Policy</a></li>
+					<li id="footerSR"><a href="DContent.aspx?Page=Accessibility&amp;c=110523"  onclick="window.open(this.href); return false;">ADA Accessibility</a></li>
+          <li id="footerCR">All content herein &copy; 2019 Service Management Group, Inc., except that <span class="noWrap">McDonald’s</span> owns all survey data collected herein. All rights reserved. <span class="noWrap">McDonald’s</span> customers may participate in up to five surveys per month per restaurant. </li>
+        </ul>
+        </div><div id="footerpush"></div></div><div id="footerframe"></div></body>
+</html>
