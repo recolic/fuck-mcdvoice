@@ -58,12 +58,19 @@ end
 
 set finalHop_postfix (grep '"/Finish.aspx' $tmpFile | sed 's/^.*href="//g' | sed 's/".*$//g')
 set finalHop "https://www.mcdvoice.com$finalHop_postfix"
+
+if [ "$finalHop_postfix" = '' ]
+    echo 'MSG- Invalid survey code.'
+    exit 3
+end
+
 echo "DEBUG: Query $finalHop"
-echo "$finalHop" | grep -v Finish > /dev/null; and echo 'Failed. The final optional sheet appears. (which is not implemented). Please try again.' ; and exit 2
+echo "$finalHop" | grep -v Finish > /dev/null; and echo 'MSG- Failed. The final optional sheet appears. (which is not implemented). Please try again.' ; and exit 2
 set finalCookie (echo "$cookie" | sed 's/HttpOnly//g')
 curl "$finalHop" --cookie "$finalCookie" -L > $tmpFile 2>&1
 
-grep 'Validation Code' $tmpFile | sed 's/^.*ValCode">//g' | sed 's/<.*$//g'
+set result_code (grep 'Validation Code' $tmpFile | sed 's/^.*ValCode">//g' | sed 's/<.*$//g')
+echo "MSG- $result_code"
 rm $tmpFile
 
 
