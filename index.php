@@ -1,6 +1,13 @@
 <html>
 <head>
 <title>Fuck mcdvoice</title>
+<script>
+function _submit_clicked () {
+    document.getElementById('btnSubmit').disabled = true;
+    document.getElementById('btnSubmit').value = 'RUNNING...';
+    return true;
+}
+</script>
 </head>
 <body>
 <?php
@@ -11,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	// Warning: forced HTTPS
 	if($key == '0000' && preg_match('/[-0-9]*/', $sCode) == 1)
 	{
-        	echo 'Please wait while the program is running...';
+        	//echo 'Please wait while the program is running...';
 		exec("./php_agent.fish $sCode", $cstdout);
 		_log("[mcd] working on sCode `$sCode`");
 		foreach($cstdout as $outLine)
@@ -42,10 +49,10 @@ function formatedEcho($str)
 }
 function printForm($sCode, $key)
 {
-	echo '<form action="index.php" method="post" style="width:70%;font-size:40px">';
+	echo '<form action="index.php" method="post" style="width:70%;font-size:40px" onsubmit="return _submit_clicked();">';
 	echo "Survey Code: <input type='text' name='surveyCode' value='$sCode' style='width:70%;height:100px;font-size:40px'><br>";
-	echo "Key: <input type='password' name='key' value='$key' style='width=70%;height:100px;font-size:40px'><br>";
-	echo '<input type="submit" style="width:95%;height:150px;font-size:40px"></form>';
+	echo "Super Key: <input type='password' name='key' value='$key' style='width=70%;height:100px;font-size:40px'><br>";
+	echo '<input type="submit" style="width:95%;height:150px;font-size:40px" id="btnSubmit"></form>';
 }
 function _log($txt)
 {
