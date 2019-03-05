@@ -1,12 +1,29 @@
 <html>
 <head>
 <title>Fuck mcdvoice</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 function _submit_clicked () {
     document.getElementById('btnSubmit').disabled = true;
     document.getElementById('btnSubmit').value = 'RUNNING...';
     return true;
 }
+$(document).ready(function () {
+    $("#txtSCode").keyup(function (e) {
+      if($(this).val().length === 31) return;
+      if(e.keyCode === 8 || e.keyCode === 37 || e.keyCode === 39) return;
+      let newStr = '';
+      let groups = $(this).val().split('-');
+      for(let i in groups) {
+       if (groups[i].length % 5 === 0) {
+        newStr += groups[i] + "-"
+       } else {
+        newStr += groups[i];
+       }
+      }
+      $(this).val(newStr);
+    });
+})
 </script>
 </head>
 <body>
@@ -50,7 +67,7 @@ function formatedEcho($str)
 function printForm($sCode, $key)
 {
 	echo '<form action="index.php" method="post" style="width:70%;font-size:40px" onsubmit="return _submit_clicked();">';
-	echo "Survey Code: <input type='text' name='surveyCode' value='$sCode' style='width:70%;height:100px;font-size:40px'><br>";
+	echo "Survey Code: <input type='text' name='surveyCode' value='$sCode' style='width:70%;height:100px;font-size:40px' id='txtSCode' maxlength='31'><br>";
 	echo "Super Key: <input type='password' name='key' value='$key' style='width=70%;height:100px;font-size:40px'><br>";
 	echo '<input type="submit" style="width:95%;height:150px;font-size:40px" id="btnSubmit"></form>';
 }
