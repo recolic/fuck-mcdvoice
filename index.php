@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	$sCode = validatyInput($_POST["surveyCode"]);
 	$key = validatyInput($_POST["key"]);
 	// Warning: forced HTTPS
-	if($key == '0000' && preg_match('/[-0-9]*/', $sCode) == 1)
+	if($key == '0000' && preg_match('/^[-0-9]*$/', $sCode) == 1)
 	{
         	//echo 'Please wait while the program is running...';
 		exec("./php_agent.fish $sCode", $cstdout);
